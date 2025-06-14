@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JKM KAPINOS GRUPA SP. Z O.O. – Profesjonalny Transport</title>
+  <meta name="description" content="Profesjonalny przewóz osób w kraju i za granicą – dla klientów indywidualnych, firm, szkół i biur podróży.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: '#1e3a8a',
+            accent: '#dc2626',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans scroll-smooth">
+
+<!-- HEADER z hamburger menu -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-primary">JKM KAPINOS GRUPA SP. Z O.O.</h1>
+    <nav class="hidden md:flex space-x-6 font-semibold">
+      <a href="oferta.html" class="hover:text-accent transition">Oferta</a>
+      <a href="#o-nas" class="hover:text-accent transition">O nas</a>
+      <a href="#galeria" class="hover:text-accent transition">Galeria</a>
+      <a href="kontakt.html" class="hover:text-accent transition">Kontakt</a>
+    </nav>
+    <button id="menu-toggle" class="md:hidden text-2xl text-primary focus:outline-none">☰</button>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 font-semibold">
+    <a href="oferta.html" class="block hover:text-accent transition">Oferta</a>
+    <a href="#o-nas" class="block hover:text-accent transition">O nas</a>
+    <a href="#galeria" class="block hover:text-accent transition">Galeria</a>
+    <a href="kontakt.html" class="block hover:text-accent transition">Kontakt</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative bg-primary text-white text-center fade-in section-spacing">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-5xl font-bold mb-4">Profesjonalny transport osób</h2>
+    <p class="text-lg mb-8">Krajowy i międzynarodowy. Bezpiecznie, komfortowo i punktualnie.</p>
+    <a href="oferta.html" class="btn-accent">Sprawdź ofertę</a>
+  </div>
+</section>
+
+<!-- WYSZUKIWARKA POŁĄCZEŃ -->
+<section class="fade-in section-spacing bg-white shadow-xl rounded-xl max-w-5xl mx-auto p-6 md:p-10 card">
+  <h3 class="text-2xl font-bold text-center mb-6 text-primary">Wyszukaj połączenie</h3>
+  <form id="search-form" class="grid gap-4 md:grid-cols-2">
+    <div class="col-span-2">
+      <label class="block font-semibold mb-1">Wybierz trasę autobusu</label>
+      <select id="route" class="w-full border p-3 rounded-lg" required>
+        <option value="">-- Wybierz trasę --</option>
+        <option value="krakow-berlin">Kraków – Berlin</option>
+        <option value="rzeszow-wieden">Rzeszów – Wiedeń</option>
+        <option value="warszawa-praga">Warszawa – Praga</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold mb-1">Skąd chcesz wyjechać?</label>
+      <select id="from" class="w-full border p-3 rounded-lg" disabled required>
+        <option value="">-- Wybierz --</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold mb-1">Dokąd chcesz dojechać?</label>
+      <select id="to" class="w-full border p-3 rounded-lg" disabled required>
+        <option value="">-- Wybierz --</option>
+      </select>
+    </div>
+
+    <div class="col-span-2">
+      <label class="block font-semibold mb-1">O której chcesz wyjechać?</label>
+      <select id="departure-time" class="w-full border p-3 rounded-lg" required>
+        <option value="">-- Wybierz godzinę --</option>
+      </select>
+    </div>
+
+    <div class="col-span-2 flex justify-between items-center text-sm text-gray-600 italic">
+      <span>Nie ma Twojej trasy?</span>
+      <a href="kalkulator.html" class="text-accent underline">Napisz do nas</a>
+    </div>
+
+    <div class="col-span-2 md:col-span-1">
+      <label class="block font-semibold mb-1">Typ kursu</label>
+      <input id="course-type" class="w-full border p-3 rounded-lg bg-gray-100" value="-" disabled />
+    </div>
+
+    <div class="col-span-2 md:col-span-1">
+      <label class="block font-semibold mb-1">Będziesz na miejscu o godzinie:</label>
+      <input id="arrival-time" class="w-full border p-3 rounded-lg bg-gray-100" value="-" disabled />
+    </div>
+
+    <div class="col-span-2">
+      <button type="submit" class="w-full btn-accent">Szukaj połączenia</button>
+    </div>
+  </form>
+</section>
+
+<!-- Pozostałe sekcje będą dodane w kolejnych etapach -->
+<script src="js/main.js"></script>
+</body>
+</html>

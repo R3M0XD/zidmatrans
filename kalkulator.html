@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator trasy – JKM KAPINOS GRUPA SP. Z O.O.</title>
+  <meta name="description" content="Poproś o indywidualną wycenę przewozu osób – wygodnie i szybko.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: '#1e3a8a',
+            accent: '#dc2626',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold text-primary">JKM KAPINOS GRUPA SP. Z O.O.</a>
+    <nav class="hidden md:flex space-x-6 font-semibold">
+      <a href="oferta.html" class="hover:text-accent transition">Oferta</a>
+      <a href="kontakt.html" class="hover:text-accent transition">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Kalkulator -->
+<section class="fade-in section-spacing">
+  <div class="max-w-4xl mx-auto px-4">
+    <h1 class="text-4xl font-bold text-center text-primary mb-6">Kalkulator trasy</h1>
+    <p class="text-center mb-10">Wypełnij poniższy formularz, a przygotujemy dla Ciebie indywidualną wycenę przewozu.</p>
+
+    <form action="https://formspree.io/f/moqowqgy" method="POST" class="card space-y-4">
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <input type="text" name="name" placeholder="Imię i nazwisko" required class="w-full border p-3 rounded-lg" />
+        <input type="email" name="email" placeholder="Adres e-mail" required class="w-full border p-3 rounded-lg" />
+        <input type="tel" name="phone" placeholder="Telefon kontaktowy" required class="w-full border p-3 rounded-lg" />
+
+        <select name="client-type" required class="w-full border p-3 rounded-lg">
+          <option value="">Typ klienta</option>
+          <option value="indywidualny">Klient indywidualny</option>
+          <option value="szkola">Szkoła</option>
+          <option value="firma">Firma</option>
+          <option value="biuro">Biuro podróży</option>
+        </select>
+
+        <input type="text" name="from" placeholder="Skąd wyjazd?" required class="w-full border p-3 rounded-lg" />
+        <input type="text" name="to" placeholder="Dokąd przejazd?" required class="w-full border p-3 rounded-lg" />
+        <input type="date" name="date" required class="w-full border p-3 rounded-lg" />
+        <input type="time" name="time" required class="w-full border p-3 rounded-lg" />
+        <input type="number" name="people" placeholder="Liczba osób" required class="w-full border p-3 rounded-lg" />
+
+        <select name="trip-type" required class="w-full border p-3 rounded-lg">
+          <option value="">Typ podróży</option>
+          <option value="jedna">W jedną stronę</option>
+          <option value="obustronna">W obie strony</option>
+        </select>
+      </div>
+
+      <textarea name="message" rows="4" placeholder="Dodatkowe informacje (opcjonalne)" class="w-full border p-3 rounded-lg"></textarea>
+
+      <label class="flex items-start space-x-2 text-sm">
+        <input type="checkbox" required class="mt-1" />
+        <span>Akceptuję <a href="polityka.html" class="text-accent underline">politykę prywatności</a>.</span>
+      </label>
+
+      <button type="submit" class="btn-accent w-full">Poproś o wycenę</button>
+    </form>
+
+    <p class="text-center text-sm text-gray-500 mt-6">Odpowiemy w ciągu 24 godzin od przesłania zapytania.</p>
+  </div>
+</section>
+
+<!-- Stopka -->
+<footer class="bg-primary text-white py-6 mt-10">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <p>&copy; 2025 JKM KAPINOS GRUPA SP. Z O.O. SŁUPIEC 328, 33-230 SZCZUCIN</p>
+  </div>
+</footer>
+
+</body>
+</html>

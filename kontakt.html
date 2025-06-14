@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – JKM KAPINOS GRUPA SP. Z O.O.</title>
+  <meta name="description" content="Skontaktuj się z JKM KAPINOS GRUPA SP. Z O.O. – szybki i wygodny transport osób.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: '#1e3a8a',
+            accent: '#dc2626',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold text-primary">JKM KAPINOS GRUPA SP. Z O.O.</a>
+    <nav class="hidden md:flex space-x-6 font-semibold">
+      <a href="oferta.html" class="hover:text-accent transition">Oferta</a>
+      <a href="index.html#galeria" class="hover:text-accent transition">Galeria</a>
+      <a href="kontakt.html" class="hover:text-accent transition text-accent">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Kontakt -->
+<section class="fade-in section-spacing">
+  <div class="max-w-4xl mx-auto px-4">
+    <h1 class="text-4xl font-bold text-center text-primary mb-10">Skontaktuj się z nami</h1>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Dane kontaktowe -->
+      <div class="card">
+        <h2 class="text-2xl font-semibold mb-4">Dane firmy</h2>
+        <p><strong>Nazwa:</strong> JKM KAPINOS GRUPA SP. Z O.O.</p>
+        <p><strong>Adres:</strong> SŁUPIEC 328, 33-230 SZCZUCIN</p>
+        <p><strong>Telefon:</strong> <a href="tel:+48123456789" class="text-accent">+48 123 456 789</a></p>
+        <p><strong>Email:</strong> <a href="mailto:biuro@kapinos.pl" class="text-accent">biuro@kapinos.pl</a></p>
+      </div>
+
+      <!-- Formularz -->
+      <div class="card">
+        <h2 class="text-2xl font-semibold mb-4">Formularz kontaktowy</h2>
+        <form action="https://formspree.io/f/moqowqgy" method="POST" class="space-y-4">
+          <input type="text" name="name" placeholder="Imię i nazwisko" required class="w-full border p-3 rounded-lg" />
+          <input type="email" name="email" placeholder="Adres e-mail" required class="w-full border p-3 rounded-lg" />
+          <input type="text" name="subject" placeholder="Temat" class="w-full border p-3 rounded-lg" />
+          <textarea name="message" rows="5" placeholder="Treść wiadomości" required class="w-full border p-3 rounded-lg"></textarea>
+
+          <label class="block text-sm">
+            <input type="checkbox" required class="mr-2" />
+            Akceptuję <a href="polityka.html" class="underline text-accent">politykę prywatności</a>
+          </label>
+
+          <button type="submit" class="btn-accent w-full">Wyślij wiadomość</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stopka -->
+<footer class="bg-primary text-white py-6 mt-10">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <p>&copy; 2025 JKM KAPINOS GRUPA SP. Z O.O. SŁUPIEC 328, 33-230 SZCZUCIN</p>
+  </div>
+</footer>
+
+</body>
+</html>
